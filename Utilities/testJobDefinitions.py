@@ -57,3 +57,12 @@ def helloWorld():
   J.setExecutable( "exe-script.py", "", "helloWorld.log" )
   return endOfAllJobs( J )
 
+def mpJob():
+  J = baseToAllJobs( 'mpJob' )
+  J.setInputSandbox( 'mpTest.py' )
+  J.setExecutable( 'testMpJob.sh' )
+  J.setTag( 'MultiCore' )
+  return endOfAllJobs( J )
+
+
+
